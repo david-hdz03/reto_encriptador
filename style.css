@@ -54,7 +54,7 @@ body {
 .boton {
     grid-area: 5 / 1 / 6 / 2;
     display: inline-block;
-    place-self: center; /* Centra el botón horizontal y verticalmente */
+    place-self: center; 
     width: 100%;
     text-align: center;
 }
@@ -133,18 +133,18 @@ button:hover {
     /* Establece el contenedor principal como flexbox */
     .contenedor {
         display: flex;
-        flex-direction: column; /* Alinea los elementos en columna */
-        align-items: center; /* Centra los elementos horizontalmente */
-        padding: 20px; /* Opcional: Agrega algo de espacio alrededor del contenido */
+        flex-direction: column;
+        align-items: center;
+        padding: 20px; 
     }
 
     .logo,
     .encriptador,
     .botones,
     .mensaje {
-        width: 100%; /* Asegúrate de que los elementos ocupen el ancho completo del contenedor */
-        text-align: center; /* Centra el texto dentro de los elementos */
-        margin-bottom: 20px; /* Espacio entre los elementos */
+        width: 100%; 
+        text-align: center;
+        margin-bottom: 20px; 
     }
 
     .encriptador{
@@ -175,7 +175,7 @@ button:hover {
         background-color: #f3f5fc;
         color: #0a3871;
         height: 700px;
-        margin-bottom: 20px; /* Espacio debajo del textarea */
+        margin-bottom: 20px; 
     }
 
     button {
@@ -183,7 +183,7 @@ button:hover {
         height: 50px;
         font-size: 20px;
         border-radius: 15px;
-        margin-bottom: 10px; /* Espacio debajo de cada botón */
+        margin-bottom: 10px; 
     }
 
     #encriptar {
@@ -197,7 +197,7 @@ button:hover {
     }
 
     .boton button {
-        width: 100%; /* Asegúrate de que el botón ocupe todo el ancho del contenedor de botones */
+        width: 100%; 
     }
 }
 
