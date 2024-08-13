@@ -1,0 +1,216 @@
+*,
+html {
+    margin: 0m;
+    padding: 0;
+}
+
+body {
+    background-color: #f3f5fc;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100vh;
+}
+
+.logo {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.encriptador {
+    grid-area: 2 / 2 / 5 / 5;
+}
+.botones {
+    grid-area: 5 / 2 / 6 / 5;
+    display: flex;
+    gap: 20px;
+}
+.mensaje {
+    grid-area: 1 / 5 / 6 / 7;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-top: 40px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    & img {
+        width: 75%;
+    }
+}
+
+.boton {
+    grid-area: 5 / 1 / 6 / 2;
+    display: inline-block;
+    place-self: center; /* Centra el botón horizontal y verticalmente */
+    width: 100%;
+    text-align: center;
+}
+
+.texto {
+    grid-area: 2 / 1 / 5 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-mostrado {
+    grid-area: 1 / 1 / 5 / 2;
+    font-size: 20px;
+    color: #8c8d8d;
+    padding: 0 5px;
+}
+
+#logo {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+#encriptador {
+    margin-top: 150px;
+}
+
+textarea {
+    width: 100%;
+    font-size: 30px;
+    border: none;
+    background-color: #f3f5fc;
+    color: #0a3871;
+    height: 700px;
+}
+
+textarea::placeholder {
+    color: #0a3871;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+button {
+    width: 48%;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 15px;
+    padding: 15px 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#encriptar {
+    background-color: #0a3871;
+    color: white;
+}
+
+#desencriptar {
+    background-color: #f3f5fc;
+    color: #0a3871;
+}
+
+#copiar {
+    background-color: #f3f5fc;
+    color: #0a3871;
+    align-self: center;
+}
+
+/* Versión de tablet */
+@media (max-width: 768px) {
+    /* Establece el contenedor principal como flexbox */
+    .contenedor {
+        display: flex;
+        flex-direction: column; /* Alinea los elementos en columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        padding: 20px; /* Opcional: Agrega algo de espacio alrededor del contenido */
+    }
+
+    .logo,
+    .encriptador,
+    .botones,
+    .mensaje {
+        width: 100%; /* Asegúrate de que los elementos ocupen el ancho completo del contenedor */
+        text-align: center; /* Centra el texto dentro de los elementos */
+        margin-bottom: 20px; /* Espacio entre los elementos */
+    }
+
+    .encriptador{
+        height: 40vh;
+    }
+
+    .logo{
+        display: flex;
+    }
+
+    #logo{
+        align-self: flex-start;
+        margin: 0;
+        margin-left: -35px;
+        padding: 0;
+    }
+
+    
+
+    .mensaje .texto img{
+        display: none;
+    }
+
+    textarea {
+        width: 100%;
+        font-size: 30px;
+        border: none;
+        background-color: #f3f5fc;
+        color: #0a3871;
+        height: 700px;
+        margin-bottom: 20px; /* Espacio debajo del textarea */
+    }
+
+    button {
+        width: 48%;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 15px;
+        margin-bottom: 10px; /* Espacio debajo de cada botón */
+    }
+
+    #encriptar {
+        background-color: #0a3871;
+        color: white;
+    }
+
+    #desencriptar {
+        background-color: #f3f5fc;
+        color: #0a3871;
+    }
+
+    .boton button {
+        width: 100%; /* Asegúrate de que el botón ocupe todo el ancho del contenedor de botones */
+    }
+}
+
+/* Versión de móvil */
+@media (max-width: 460px){
+    .texto h2,p{
+        font-size: 20px;
+        max-width: 70%;
+    }
+
+    .texto-mostrado p{
+        font-size: 20px;
+        margin-left: 15%;
+        margin-top: 15%;
+    }
+}
